@@ -1,0 +1,20 @@
+.Button {
+    padding: 8px 16px;
+    border-radius: 2px;
+    background-color: #4fa94d;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+    min-width: 180px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
+}
+
+.Button:hover,
+.Button:focus {
+    background-color: #92cc91;
+}

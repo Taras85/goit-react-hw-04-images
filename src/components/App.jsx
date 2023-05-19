@@ -9,17 +9,6 @@ import Loader from './Loader/Loader';
 import Button from './Button/Button';
 import Modal from './Modal/Modal';
 
-// class App extends Component{
-//   state = {
-//     query: '',
-//     images: [],
-//     totalImages: 0,
-//     largeImageURL: '',
-//     page: 1,
-//     error: null,
-//     isLoading: false,
-//     showModal: false,
-//   };
 
 const App =()=>{
   const [query, setQuery]=useState('')
@@ -31,28 +20,6 @@ const App =()=>{
   const [isLoading, setIsLoading]=useState(false)
   const [showModal, setShovModal]=useState(false)
 
-  // async componentDidUpdate(prevProps, prevState) {
-    
-  //   if (prevState.query !== this.state.query || prevState.page !== this.state.page) {
-  //     this.toggleLoader();
-
-  //     try {
-  //       const data = await fetchImages(this.state.query, this.state.page);
-  //       this.setState({ totalImages: data.totalHits });
-  //       if (data.totalHits === 0) {
-  //         this.setState({ images: [] });
-  //         toast.info(`No found  ${this.state.query}. `);
-  //         return;
-  //       }
-  //       this.setState({ images: [...this.state.images, ...data.hits] });
-  //     } catch (error) {
-  //       this.setState({ error });
-  //       toast.error('Oops! Something went wrong');
-  //     } finally {
-  //       this.toggleLoader();
-  //     }
-  //   }
-  // }
     useEffect(()=>{
       if (query){
             const fetchImg = async ()=>{
@@ -107,18 +74,6 @@ const App =()=>{
     setShovModal(false)
     setLargeImageURL('')
   }
-
-  // const toggleLoader = () => {
-  //   this.setState(({ isLoading }) => ({
-  //     isLoading: !isLoading,
-  //   }));
-  // };
-
-  // const toggleModal = () => {
-  //   this.setState(({ showModal }) => ({
-  //     showModal: !showModal,
-  //   }));
-  // };
 
 
 

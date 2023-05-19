@@ -4,10 +4,6 @@ import PropTypes from 'prop-types';
 import { toast } from "react-toastify";
 
 
-// export class Searchbar extends Component {
-//   state = {
-//     query: '',
-//   }
 const Searchbar = ({onSubmit}) =>{
   const [query, setQuery]=useState('')
     
@@ -15,7 +11,7 @@ const Searchbar = ({onSubmit}) =>{
 
   const handleSubmit = e => {
     e.preventDefault();
-    // const { query } = this.state
+
    
 
     if (query.trim() === '') {

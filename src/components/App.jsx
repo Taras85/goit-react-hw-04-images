@@ -1,4 +1,4 @@
-import { Component, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -63,7 +63,7 @@ const App =()=>{
                   
                   if (data.totalHits === 0) {
                     setImages([])
-                    toast.info(`No found  ${this.state.query}. `);
+                    toast.info(`No found  ${query}. `);
                     return;
                   }
 
@@ -90,6 +90,9 @@ const App =()=>{
   } 
 
   const onLoadMore = () => {
+    if (images.length === totalImages){
+      toast.info(`At your request no more photos`)
+    }
  setPage(prevPage =>prevPage+1)
   }
 
@@ -97,7 +100,7 @@ const App =()=>{
 
   const onOpenModal = e => {
     setLargeImageURL(e.target.dataset.source)
-    // this.setState({ largeImageURL: e.target.dataset.source });
+
     setShovModal(true)
   };
   const closeModal =( )=>{
@@ -118,8 +121,7 @@ const App =()=>{
   // };
 
 
-  // render() {
-  //   const { images, largeImageURL, isLoading, showModal, error } = this.state;
+
     return (
       <div>
         <Searchbar

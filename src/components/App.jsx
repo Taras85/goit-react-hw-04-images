@@ -9,8 +9,6 @@ import Loader from './Loader/Loader';
 import Button from './Button/Button';
 import Modal from './Modal/Modal';
 
-
-
 // class App extends Component{
 //   state = {
 //     query: '',

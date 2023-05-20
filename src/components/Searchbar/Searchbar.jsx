@@ -19,7 +19,8 @@ const Searchbar = ({onSubmit}) =>{
       return;
     }
 
-    onSubmit(query)
+    onSubmit(query.trim());
+    setQuery('')
   }
 
   const handleSearchQuery = e => {
@@ -52,7 +53,7 @@ const Searchbar = ({onSubmit}) =>{
 
 
 Searchbar.propTypes = {
-  onSubmit: PropTypes.func,
+  onSubmit: PropTypes.func.isRequired,
 }
 
 

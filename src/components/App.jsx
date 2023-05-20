@@ -22,6 +22,7 @@ const App =()=>{
 
     useEffect(()=>{
       if (query){
+       
             const fetchImg = async ()=>{
                try {
                 setIsLoading(true)
@@ -33,7 +34,7 @@ const App =()=>{
                     toast.info(`No found  ${query}. `);
                     return;
                   }
-
+                  
                   setImages(prevImages=> [...prevImages, ...data.hits])
                  
                 } catch (error) {
@@ -46,6 +47,8 @@ const App =()=>{
               }
               fetchImg()
             }
+            
+         
     }, [query, page])
 
 

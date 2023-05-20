@@ -17,10 +17,13 @@ const Searchbar = ({onSubmit}) =>{
     if (query.trim() === '') {
       toast.info('Please enter your search query.');
       return;
+     
     }
+
 
     onSubmit(query.trim());
     setQuery('')
+    
   }
 
   const handleSearchQuery = e => {
